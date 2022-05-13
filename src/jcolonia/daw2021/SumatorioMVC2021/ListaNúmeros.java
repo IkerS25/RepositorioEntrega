@@ -161,6 +161,10 @@ public class ListaNúmeros {
 
 		return listaTextos;
 	}
+	
+	public double getPosiciónSumando(int posición) {
+		return lista.get(posición);
+	}
 
 	/**
 	 * Produce una representación textual de la suma con los valores alineados.
