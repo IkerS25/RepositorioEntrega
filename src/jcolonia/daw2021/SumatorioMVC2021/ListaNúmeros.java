@@ -162,6 +162,11 @@ public class ListaNúmeros {
 		return listaTextos;
 	}
 	
+	/**
+	 * Devuelve la posición pasada como parámetro de la lista.
+	 * @param posición
+	 * @return el número guardado en @posicion.
+	 */
 	public double getPosiciónSumando(int posición) {
 		return lista.get(posición);
 	}

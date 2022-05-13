@@ -2,6 +2,10 @@ package jcolonia.daw2021.SumatorioMVC2021;
 
 import java.util.Scanner;
 
+/**
+ * @author dawm113
+ * Añade un número a la listaGeneral.
+ */
 public class VistaAñadirSumando extends Vista {
 
 	/**
@@ -20,6 +24,11 @@ public class VistaAñadirSumando extends Vista {
 
 	}
 
+	/**
+	 * Añade un número a la lista Provisional.
+	 * @param listaProvisional la lista a la que se añade el número.
+	 * @throws SumatorioNumberException
+	 */
 	// Cargar sumando
 	public void cargarSumando(ListaNúmeros listaProvisional) throws SumatorioNumberException {
 		String númeroElegidoTexto;

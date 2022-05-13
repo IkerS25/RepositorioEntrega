@@ -58,9 +58,9 @@ public class ControlSumatorio {
 			case 2: // Opción 2: Mostrar sumandos
 				mostrarSumandos();
 				break;
-//			case 3: // Opción 3: Mostrar suma
-//				mostrarSuma();
-//				break;
+			case 3: // Opción 3: Mostrar suma
+				mostrarSuma();
+				break;
 //			case 4: // Opción 4: Reset
 //				restablecer();
 //				break;
@@ -73,16 +73,26 @@ public class ControlSumatorio {
 	}
 
 	/**
+	 * Muestra la suma completa de todos los números.
+	 */
+	public void mostrarSuma() {
+		VistaListado listado = new VistaListado(null, entrada);
+		listado.mostrarSuma(conjunto);
+		
+	}
+
+	/**
 	 * Muestra todos los sumandos almacenados.
 	 */
 	public void mostrarSumandos() {
-		for (int i = 0; i < conjunto.getNúmSumandos(); i++)
-			System.out.println(conjunto.getPosiciónSumando(i));
+		VistaListado listado = new VistaListado(null, entrada);
+		listado.mostrarListado(conjunto);
 
 	}
 
 	/**
 	 * Carga un sumando en la lista de números.
+	 * 
 	 * @throws SumatorioNumberException
 	 */
 	public void cargarSumando() throws SumatorioNumberException {
@@ -101,6 +111,7 @@ public class ControlSumatorio {
 
 	/**
 	 * Imprime el mensaje.
+	 * 
 	 * @param id
 	 */
 	private void ejecutarGenérico(int id) {
