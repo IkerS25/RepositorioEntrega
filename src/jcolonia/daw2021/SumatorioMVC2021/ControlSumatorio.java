@@ -55,9 +55,9 @@ public class ControlSumatorio {
 			case 1: // Opción 1: Entrada datos
 				cargarSumando();
 				break;
-//			case 2: // Opción 2: Mostrar sumandos
-//				mostrarSumandos();
-//				break;
+			case 2: // Opción 2: Mostrar sumandos
+				mostrarSumandos();
+				break;
 //			case 3: // Opción 3: Mostrar suma
 //				mostrarSuma();
 //				break;
@@ -72,22 +72,37 @@ public class ControlSumatorio {
 		} while (!fin);
 	}
 
-	public void cargarSumando() throws SumatorioNumberException {
-		
-		ListaNúmeros listaProvisional = new ListaNúmeros();
-		
-		VistaAñadirSumando sumandoNuevo = new VistaAñadirSumando(null, entrada);
-		
-		sumandoNuevo.cargarSumando(listaProvisional);
-		
-		for(int i = 0; i<listaProvisional.getNúmSumandos();i++) {
-			conjunto.add(listaProvisional.getPosiciónSumando(i));
-		}
-		
+	/**
+	 * Muestra todos los sumandos almacenados.
+	 */
+	public void mostrarSumandos() {
+		for (int i = 0; i < conjunto.getNúmSumandos(); i++)
+			System.out.println(conjunto.getPosiciónSumando(i));
 
-		
 	}
 
+	/**
+	 * Carga un sumando en la lista de números.
+	 * @throws SumatorioNumberException
+	 */
+	public void cargarSumando() throws SumatorioNumberException {
+
+		ListaNúmeros listaProvisional = new ListaNúmeros();
+
+		VistaAñadirSumando sumandoNuevo = new VistaAñadirSumando(null, entrada);
+
+		sumandoNuevo.cargarSumando(listaProvisional);
+
+		for (int i = 0; i < listaProvisional.getNúmSumandos(); i++) {
+			conjunto.add(listaProvisional.getPosiciónSumando(i));
+		}
+
+	}
+
+	/**
+	 * Imprime el mensaje.
+	 * @param id
+	 */
 	private void ejecutarGenérico(int id) {
 		String mensaje;
 		mensaje = String.format("%n  Ha elegido la opción %d: «%s»", id, OPCIONES_MENÚ_PRINCIPAL[id - 1]);
