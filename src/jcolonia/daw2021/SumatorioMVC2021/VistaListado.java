@@ -40,7 +40,7 @@ public class VistaListado extends Vista {
 	}
 	
 	/**
-	 * Muestra la suma de todos los números.
+	 * Muestra la suma de todos los número en la pantalla.
 	 * @param conjunto
 	 */
 	public void mostrarSuma(ListaNúmeros conjunto) {
