@@ -12,12 +12,22 @@ public class VistaAñadirSumando extends Vista {
 	 * Texto visible para identificar la vista.
 	 */
 	String título;
+	
+	/**
+	 * La prueba
+	 */
+	String prueba;
 
 	/**
 	 * La entrada por pantalla.
 	 */
 	Scanner entrada = getEntrada();
 
+	/**
+	 * Hereda el título del menu y la entrada mediante pantalla por pantalla.
+	 * @param título
+	 * @param sc
+	 */
 	public VistaAñadirSumando(String título, Scanner sc) {
 		super(título, sc);
 		this.título = título;
